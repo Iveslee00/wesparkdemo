@@ -50,7 +50,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-[11px] tracking-[0.2em] text-white/60 hover:text-white transition-colors duration-300 hover-line"
+                className="text-sm tracking-[0.2em] text-white hover:text-white/70 transition-colors duration-300 hover-line"
               >
                 {link.label}
               </Link>
@@ -106,7 +106,7 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     onClick={() => setMobileOpen(false)}
-                    className="text-2xl font-light text-white/75 hover:text-white transition-colors"
+                    className="text-2xl font-normal text-white/90 hover:text-white transition-colors"
                   >
                     {link.label}
                   </Link>

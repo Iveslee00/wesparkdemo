@@ -50,22 +50,22 @@ export default function Hero() {
       >
         <div className="max-w-xs lg:max-w-sm">
           {/* Brand tag */}
-          <p className="text-[9px] tracking-[0.42em] uppercase mb-8"
-             style={{ color: "rgba(255,255,255,0.28)" }}>
+          <p className="text-xs tracking-[0.42em] uppercase mb-8"
+             style={{ color: "rgba(255,255,255,0.55)" }}>
             品牌主張 · BEAUTY MANIFESTO
           </p>
 
           {/* Slogan */}
-          <h1 className="font-light text-white tracking-tight leading-tight"
-              style={{ fontSize: "clamp(26px, 3.8vw, 46px)" }}>
+          <h1 className="font-normal text-white tracking-tight leading-tight"
+              style={{ fontSize: "clamp(28px, 4vw, 50px)" }}>
             WE SPARK
           </h1>
-          <h1 className="font-light tracking-tight leading-tight italic mb-5"
-              style={{ fontSize: "clamp(26px, 3.8vw, 46px)", color: "rgba(140,106,120,0.55)" }}>
+          <h1 className="font-normal tracking-tight leading-tight italic mb-5"
+              style={{ fontSize: "clamp(28px, 4vw, 50px)", color: "rgba(168,128,144,0.78)" }}>
             BEAUTY.
           </h1>
-          <p className="text-xs font-light tracking-wider mb-10"
-             style={{ color: "rgba(255,255,255,0.32)" }}>
+          <p className="text-sm font-normal tracking-wider mb-10"
+             style={{ color: "rgba(255,255,255,0.68)" }}>
             我們點燃美麗時刻
           </p>
 
@@ -74,39 +74,39 @@ export default function Hero() {
                style={{ backgroundColor: "rgba(255,255,255,0.1)" }} />
 
           {/* Philosophy */}
-          <p className="text-[9px] tracking-[0.35em] uppercase mb-5"
-             style={{ color: "#8C6A78" }}>
+          <p className="text-xs tracking-[0.35em] uppercase mb-5"
+             style={{ color: "#a88090" }}>
             我們的理念 · OUR PHILOSOPHY
           </p>
-          <p className="font-light leading-snug mb-1"
-             style={{ fontSize: "clamp(15px, 1.8vw, 19px)", color: "rgba(255,255,255,0.78)" }}>
+          <p className="font-normal leading-snug mb-1"
+             style={{ fontSize: "clamp(18px, 2vw, 22px)", color: "rgba(255,255,255,0.92)" }}>
             美不是等待，
           </p>
-          <p className="font-light leading-snug mb-5"
-             style={{ fontSize: "clamp(15px, 1.8vw, 19px)", color: "rgba(140,106,120,0.85)" }}>
+          <p className="font-normal leading-snug mb-5"
+             style={{ fontSize: "clamp(18px, 2vw, 22px)", color: "rgba(168,128,144,0.95)" }}>
             而是點燃。
           </p>
-          <p className="text-[11px] font-light italic mb-7"
-             style={{ color: "rgba(255,255,255,0.2)" }}>
+          <p className="text-sm font-normal italic mb-7"
+             style={{ color: "rgba(255,255,255,0.65)" }}>
             Beauty is not something to wait for.
             <br />It is something to ignite.
           </p>
-          <p className="text-xs font-light leading-relaxed mb-10"
-             style={{ color: "rgba(255,255,255,0.4)" }}>
+          <p className="text-base font-normal leading-relaxed mb-10"
+             style={{ color: "rgba(255,255,255,0.75)" }}>
             在 WIS，我們點燃創意與市場之間的火花。
             <br />在概念與成長之間，創造驅動美麗前行的動能。
           </p>
 
           {/* CTA */}
           <a href="/brands" className="group inline-flex items-center gap-3">
-            <span className="text-[10px] tracking-[0.3em] uppercase border-b pb-0.5
-                             text-white/45 border-white/18
-                             hover:text-white/90 hover:border-white/70
+            <span className="text-sm tracking-[0.3em] uppercase border-b pb-0.5
+                             text-white/85 border-white/40
+                             hover:text-white hover:border-white/80
                              transition-all duration-300">
               探索 WIS
             </span>
-            <ArrowRight size={11}
-              className="text-white/35 group-hover:text-white/75 group-hover:translate-x-1.5 transition-all duration-300" />
+            <ArrowRight size={13}
+              className="text-white/70 group-hover:text-white group-hover:translate-x-1.5 transition-all duration-300" />
           </a>
         </div>
       </motion.div>

@@ -59,7 +59,7 @@ export default function Editorial() {
               transition={{ duration: 0.6 }}
               className="section-label mb-2"
             >
-              品牌故事 · EDITORIAL
+              KOL 分享 · KOL SHOWCASE
             </motion.p>
             <motion.h2
               initial={{ opacity: 0, y: 18 }}
@@ -67,15 +67,15 @@ export default function Editorial() {
               transition={{ duration: 0.7, delay: 0.08 }}
               className="section-title"
             >
-              美妝新知與洞察
+              KOL 分享區
             </motion.h2>
             <motion.p
               initial={{ opacity: 0 }}
               animate={isInView ? { opacity: 1 } : {}}
               transition={{ duration: 0.6, delay: 0.14 }}
-              className="text-primary/32 text-xs font-light italic mt-1"
+              className="text-primary/55 text-sm font-normal italic mt-1"
             >
-              Beauty Stories &amp; Trends
+              KOL Showcase &amp; Insights
             </motion.p>
           </div>
           <motion.a
@@ -83,10 +83,10 @@ export default function Editorial() {
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="group flex items-center gap-1.5 text-[10px] tracking-[0.22em] uppercase
+            className="group flex items-center gap-1.5 text-xs tracking-[0.22em] uppercase
                        text-secondary hover:text-primary transition-colors duration-300"
           >
-            所有文章
+            查看更多
             <ArrowUpRight size={12}
               className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
           </motion.a>
@@ -166,14 +166,14 @@ function ArticleCard({
         {/* Overlay text for large / wide cards */}
         {(tall || wide) && (
           <div className="absolute inset-0 flex flex-col justify-end p-5 md:p-7">
-            <p className="text-[8px] tracking-[0.3em] uppercase text-white/38 mb-2">
+            <p className="text-xs tracking-[0.3em] uppercase text-white/65 mb-2">
               {article.category} · {article.date}
             </p>
-            <h3 className={`font-light text-white leading-tight ${tall ? "text-xl md:text-2xl" : "text-lg md:text-xl"}`}>
+            <h3 className={`font-normal text-white leading-tight ${tall ? "text-2xl md:text-3xl" : "text-xl md:text-2xl"}`}>
               {article.title}
             </h3>
             {tall && (
-              <p className="text-xs text-white/45 mt-2 font-light leading-relaxed max-w-sm hidden md:block">
+              <p className="text-sm text-white/72 mt-2 font-normal leading-relaxed max-w-sm hidden md:block">
                 {article.excerpt}
               </p>
             )}
@@ -192,11 +192,11 @@ function ArticleCard({
       {!tall && !wide && (
         <div className="pt-4">
           <p className="section-label mb-1.5">{article.category} · {article.date}</p>
-          <h3 className="text-sm font-light text-primary leading-snug mb-1.5
-                         group-hover:text-primary/55 transition-colors duration-300">
+          <h3 className="text-base font-normal text-primary leading-snug mb-1.5
+                         group-hover:text-primary/65 transition-colors duration-300">
             {article.title}
           </h3>
-          <p className="text-xs text-primary/38 font-light leading-relaxed">{article.excerpt}</p>
+          <p className="text-sm text-primary/62 font-normal leading-relaxed">{article.excerpt}</p>
         </div>
       )}
     </a>

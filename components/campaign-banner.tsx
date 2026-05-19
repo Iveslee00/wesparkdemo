@@ -49,7 +49,7 @@ export default function CampaignBanner() {
           initial={{ opacity: 0, y: 12 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.18 }}
-          className="text-[9px] tracking-[0.42em] uppercase text-white/35 mb-8"
+          className="text-[10px] tracking-[0.42em] uppercase text-white/58 mb-8"
         >
           CAMPAIGN 2026
         </motion.p>
@@ -60,8 +60,8 @@ export default function CampaignBanner() {
             initial={{ y: 60, opacity: 0 }}
             animate={isInView ? { y: 0, opacity: 1 } : {}}
             transition={{ duration: 0.9, delay: 0.28, ease: [0.16, 1, 0.3, 1] }}
-            className="text-white font-light tracking-tight leading-none"
-            style={{ fontSize: "clamp(20px, 4vw, 48px)" }}
+            className="text-white font-normal tracking-tight leading-none"
+            style={{ fontSize: "clamp(22px, 4.2vw, 52px)" }}
           >
             WE DON&apos;T FOLLOW BEAUTY.
           </motion.h2>
@@ -71,8 +71,8 @@ export default function CampaignBanner() {
             initial={{ y: 60, opacity: 0 }}
             animate={isInView ? { y: 0, opacity: 1 } : {}}
             transition={{ duration: 0.9, delay: 0.38, ease: [0.16, 1, 0.3, 1] }}
-            className="font-light tracking-tight leading-none italic"
-            style={{ fontSize: "clamp(20px, 4vw, 48px)", color: "rgba(255,255,255,0.22)" }}
+            className="font-normal tracking-tight leading-none italic"
+            style={{ fontSize: "clamp(22px, 4.2vw, 52px)", color: "rgba(255,255,255,0.70)" }}
           >
             WE IGNITE IT.
           </motion.h2>

@@ -38,7 +38,7 @@ export default function Manifesto() {
               variants={fadeUp}
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
-              className="text-4xl md:text-6xl lg:text-7xl font-light text-primary leading-[1.15] tracking-tight"
+              className="text-4xl md:text-6xl lg:text-7xl font-normal text-primary leading-[1.15] tracking-tight"
             >
               美不是等待，
               <br />
@@ -52,7 +52,7 @@ export default function Manifesto() {
             variants={fadeUp}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
-            className="text-primary/35 text-base md:text-lg font-light italic tracking-wide mb-16 md:mb-20"
+            className="text-primary/60 text-lg md:text-xl font-normal italic tracking-wide mb-16 md:mb-20"
           >
             Beauty is not something to wait for. It is something to ignite.
           </motion.p>
@@ -75,12 +75,12 @@ export default function Manifesto() {
               animate={isInView ? "visible" : "hidden"}
               className="space-y-4"
             >
-              <p className="text-primary/80 text-lg md:text-xl font-light leading-relaxed">
+              <p className="text-primary/85 text-xl md:text-2xl font-normal leading-relaxed">
                 在 WIS，
                 <br />
                 我們點燃創意與市場之間的火花。
               </p>
-              <p className="text-primary/50 text-base font-light leading-relaxed">
+              <p className="text-primary/65 text-lg font-normal leading-relaxed">
                 在概念與成長之間，
                 <br />
                 我們創造驅動美麗前行的動能。
@@ -94,7 +94,7 @@ export default function Manifesto() {
               animate={isInView ? "visible" : "hidden"}
               className="space-y-4"
             >
-              <p className="text-primary/80 text-lg md:text-xl font-light leading-relaxed">
+              <p className="text-primary/85 text-xl md:text-2xl font-normal leading-relaxed">
                 WIS 不只是一個名稱，
                 <br />
                 而是一種行動。

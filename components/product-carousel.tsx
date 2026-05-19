@@ -72,7 +72,7 @@ export default function ProductCarousel() {
   };
 
   return (
-    <section className="py-14 md:py-18 border-t border-primary/8 bg-brand-bg">
+    <section className="py-14 md:py-18 border-t border-primary/10 bg-brand-bg">
       <div className="section-container">
 
         {/* Header row */}
@@ -107,13 +107,13 @@ export default function ProductCarousel() {
               <button
                 key={dir}
                 onClick={() => scroll(dir)}
-                className="w-8 h-8 border border-primary/20 flex items-center justify-center
-                           hover:border-primary/50 hover:bg-primary/5 transition-all duration-200"
+                className="w-8 h-8 border border-primary/25 flex items-center justify-center
+                           hover:border-primary/55 hover:bg-primary/5 transition-all duration-200"
                 aria-label={dir === "left" ? "上一個" : "下一個"}
               >
                 {dir === "left"
-                  ? <ChevronLeft size={14} className="text-primary/45" />
-                  : <ChevronRight size={14} className="text-primary/45" />
+                  ? <ChevronLeft size={14} className="text-primary/55" />
+                  : <ChevronRight size={14} className="text-primary/55" />
                 }
               </button>
             ))}
@@ -155,7 +155,7 @@ export default function ProductCarousel() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/35 to-transparent" />
                   {/* Brand badge */}
-                  <span className="absolute top-3 left-3 text-[8px] tracking-[0.25em] uppercase text-white/55">
+                  <span className="absolute top-3 left-3 text-[10px] tracking-[0.25em] uppercase text-white/68">
                     {product.brand}
                   </span>
                 </div>
@@ -164,13 +164,13 @@ export default function ProductCarousel() {
                 <p className="section-label mb-1">
                   {product.brandZh} · {product.brand}
                 </p>
-                <p className="text-sm font-light text-primary leading-snug
-                              group-hover:text-primary/60 transition-colors duration-300">
+                <p className="text-base font-normal text-primary leading-snug
+                              group-hover:text-primary/65 transition-colors duration-300">
                   {product.name}
                 </p>
-                <span className="inline-block mt-2.5 text-[9px] tracking-[0.2em] uppercase
-                                 text-primary/35 border-b border-primary/12 pb-px
-                                 group-hover:text-primary/65 group-hover:border-primary/40
+                <span className="inline-block mt-2.5 text-xs tracking-[0.2em] uppercase
+                                 text-primary/55 border-b border-primary/18 pb-px
+                                 group-hover:text-primary group-hover:border-primary/50
                                  transition-all duration-300">
                   了解更多
                 </span>

@@ -68,7 +68,7 @@ export default function FeaturedProducts() {
               initial={{ opacity: 0 }}
               animate={isInView ? { opacity: 1 } : {}}
               transition={{ duration: 0.6, delay: 0.16 }}
-              className="text-primary/32 text-xs font-light italic mt-1"
+              className="text-primary/55 text-sm font-normal italic mt-1"
             >
               Curated Beauty Picks
             </motion.p>
@@ -78,7 +78,7 @@ export default function FeaturedProducts() {
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ duration: 0.6, delay: 0.22 }}
-            className="group flex items-center gap-1.5 text-[10px] tracking-[0.22em] uppercase
+            className="group flex items-center gap-1.5 text-[11px] tracking-[0.22em] uppercase
                        text-secondary hover:text-primary transition-colors duration-300"
           >
             查看全部
@@ -141,7 +141,7 @@ function ProductCard({
           sizes={tall ? "66vw" : "33vw"}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/5 to-transparent" />
-        <span className="absolute top-4 left-4 text-[8px] tracking-[0.28em] uppercase text-white/50">
+        <span className="absolute top-4 left-4 text-[10px] tracking-[0.28em] uppercase text-white/65">
           {product.brand}
         </span>
         <div className="absolute top-3.5 right-3.5 w-7 h-7 rounded-full bg-white/0
@@ -154,14 +154,14 @@ function ProductCard({
 
       <div className="pt-4">
         <p className="section-label mb-1">{product.brandZh} · {product.brand}</p>
-        <h3 className="text-sm font-light text-primary leading-snug mb-1
-                       group-hover:text-primary/60 transition-colors duration-300">
+        <h3 className="text-base font-normal text-primary leading-snug mb-1
+                       group-hover:text-primary/65 transition-colors duration-300">
           {product.name}
         </h3>
-        <p className="text-xs text-primary/35 font-light italic">{product.tagline}</p>
-        <span className="inline-block mt-3 text-[9px] tracking-[0.22em] uppercase
-                         text-primary/45 border-b border-primary/15 pb-px
-                         group-hover:text-primary group-hover:border-primary/50
+        <p className="text-sm text-primary/60 font-normal italic">{product.tagline}</p>
+        <span className="inline-block mt-3 text-xs tracking-[0.22em] uppercase
+                         text-primary/55 border-b border-primary/20 pb-px
+                         group-hover:text-primary group-hover:border-primary/55
                          transition-all duration-300">
           了解更多
         </span>

@@ -51,12 +51,11 @@ body {
 
 @layer components {
   .section-label {
-    @apply text-[9px] tracking-[0.35em] uppercase text-secondary font-medium;
+    @apply text-[13px] tracking-[0.35em] uppercase font-medium text-secondary;
   }
 
-  /* Compact section title — max text-3xl */
   .section-title {
-    @apply text-2xl md:text-3xl font-light tracking-tight leading-snug text-primary;
+    @apply text-3xl md:text-4xl font-normal tracking-tight leading-snug text-primary;
   }
 
   .section-container {

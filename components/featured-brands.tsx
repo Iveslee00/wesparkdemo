@@ -41,7 +41,7 @@ export default function FeaturedBrands() {
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ duration: 0.6, delay: 0.14 }}
-            className="text-primary/32 text-xs font-light italic mb-5"
+            className="text-primary/55 text-sm font-normal italic mb-5"
           >
             Brands That Spark Influence
           </motion.p>
@@ -49,7 +49,7 @@ export default function FeaturedBrands() {
             initial={{ opacity: 0, y: 14 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-primary/50 font-light text-sm leading-relaxed"
+            className="text-primary/72 font-normal text-base leading-relaxed"
           >
             嚴選能引領趨勢、塑造文化，
             並定義現代美麗生活方式的代理品牌。
@@ -76,16 +76,16 @@ export default function FeaturedBrands() {
 
 function BrandItem({ brand }: { brand: { name: string; zh: string; origin: string } }) {
   return (
-    <div className="group border-t border-primary/10 py-6 md:py-7 md:pr-8 cursor-default">
+    <div className="group border-t border-primary/15 py-6 md:py-7 md:pr-8 cursor-default">
       <div className="flex items-start justify-between">
         <div>
-          <h3 className="text-lg font-light text-primary/52 tracking-wide
+          <h3 className="text-xl font-normal text-primary/72 tracking-wide
                          group-hover:text-primary transition-colors duration-500">
             {brand.name}
           </h3>
-          <p className="text-sm text-primary/28 mt-0.5 font-light">{brand.zh}</p>
+          <p className="text-base text-primary/55 mt-0.5 font-normal">{brand.zh}</p>
         </div>
-        <span className="text-[9px] tracking-[0.2em] uppercase text-primary/20 mt-1.5
+        <span className="text-[11px] tracking-[0.2em] uppercase text-primary/45 mt-1.5
                          group-hover:text-secondary transition-colors duration-500">
           {brand.origin}
         </span>
