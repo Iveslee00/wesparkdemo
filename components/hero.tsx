@@ -37,7 +37,7 @@ export default function Hero() {
   return (
     /* Mobile: image on top (flex-col-reverse) → text below
        Desktop: text left 44% | image right 56% (flex-row), full viewport */
-    <section className="flex flex-col-reverse md:flex-row md:h-screen">
+    <section className="flex flex-col-reverse md:flex-row md:h-screen md:pt-[72px]">
 
       {/* ── LEFT: Brand text + Philosophy ─────────────────── */}
       <motion.div

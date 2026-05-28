@@ -5,16 +5,18 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
-
-const navLinks = [
-  { label: "關於 WIS", href: "/about" },
-  { label: "品牌專區", href: "/brands" },
-  { label: "最新消息", href: "/news" },
-  { label: "聯絡我們", href: "/contact" },
-];
+import { useLang } from "@/lib/language-context";
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { lang, toggle, t } = useLang();
+
+  const navLinks = [
+    { label: t.nav.about, href: "/about" },
+    { label: t.nav.brands, href: "/brands" },
+    { label: t.nav.news, href: "/news" },
+    { label: t.nav.contact, href: "/contact" },
+  ];
 
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "";
@@ -55,16 +57,33 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
+
+            {/* Language toggle */}
+            <button
+              onClick={toggle}
+              className="text-xs tracking-[0.25em] font-medium transition-colors duration-300 border border-white/25 rounded-sm px-2.5 py-1 hover:border-white/60 hover:text-white text-white/70"
+              aria-label="Switch language"
+            >
+              {lang === "zh" ? "EN" : "中文"}
+            </button>
           </nav>
 
-          {/* Mobile trigger */}
-          <button
-            className="md:hidden text-white/70 hover:text-white transition-colors"
-            onClick={() => setMobileOpen(true)}
-            aria-label="開啟選單"
-          >
-            <Menu size={20} strokeWidth={1.5} />
-          </button>
+          {/* Mobile controls */}
+          <div className="md:hidden flex items-center gap-3">
+            <button
+              onClick={toggle}
+              className="text-[10px] tracking-[0.22em] font-medium border border-white/25 rounded-sm px-2 py-0.5 text-white/65 hover:text-white hover:border-white/50 transition-colors"
+            >
+              {lang === "zh" ? "EN" : "中"}
+            </button>
+            <button
+              className="text-white/70 hover:text-white transition-colors"
+              onClick={() => setMobileOpen(true)}
+              aria-label="開啟選單"
+            >
+              <Menu size={20} strokeWidth={1.5} />
+            </button>
+          </div>
         </div>
       </motion.header>
 
@@ -114,9 +133,17 @@ export default function Navbar() {
               ))}
             </nav>
 
-            <p className="px-10 pb-10 text-[9px] tracking-[0.35em] uppercase text-white/25">
-              WE SPARK BEAUTY
-            </p>
+            <div className="px-10 pb-10 flex items-center justify-between">
+              <p className="text-[9px] tracking-[0.35em] uppercase text-white/25">
+                WE SPARK BEAUTY
+              </p>
+              <button
+                onClick={toggle}
+                className="text-xs tracking-[0.22em] border border-white/25 rounded-sm px-3 py-1 text-white/55 hover:text-white hover:border-white/50 transition-colors"
+              >
+                {lang === "zh" ? "ENGLISH" : "中文"}
+              </button>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

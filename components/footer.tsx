@@ -4,17 +4,19 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-
-const navLinks = [
-  { label: "關於 WIS", href: "/about" },
-  { label: "品牌專區", href: "/brands" },
-  { label: "最新消息", href: "/news" },
-  { label: "聯絡我們", href: "/contact" },
-];
+import { useLang } from "@/lib/language-context";
 
 export default function Footer() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-5%" });
+  const { t } = useLang();
+
+  const navLinks = [
+    { label: t.nav.about, href: "/about" },
+    { label: t.nav.brands, href: "/brands" },
+    { label: t.nav.news, href: "/news" },
+    { label: t.nav.contact, href: "/contact" },
+  ];
 
   return (
     <footer ref={ref} style={{ backgroundColor: "#140810" }}>
@@ -44,8 +46,7 @@ export default function Footer() {
             </p>
             <p className="text-base font-normal leading-relaxed max-w-xs"
                style={{ color: "rgba(255,255,255,0.72)" }}>
-              我們點燃創意、品牌，
-              <br />與下一個美妝新浪潮。
+              {t.footer.tagline}
             </p>
           </motion.div>
 
@@ -58,7 +59,7 @@ export default function Footer() {
           >
             <p className="text-[10px] tracking-[0.3em] uppercase mb-5"
                style={{ color: "rgba(255,255,255,0.40)" }}>
-              頁面導覽
+              {t.footer.nav}
             </p>
             <ul className="space-y-3">
               {navLinks.map((link) => (
@@ -86,7 +87,7 @@ export default function Footer() {
           >
             <p className="text-[10px] tracking-[0.3em] uppercase mb-5"
                style={{ color: "rgba(255,255,255,0.40)" }}>
-              聯絡資訊
+              {t.footer.contactInfo}
             </p>
             <address className="not-italic space-y-3.5 text-base font-normal leading-relaxed"
                      style={{ color: "rgba(255,255,255,0.72)" }}>
@@ -108,7 +109,7 @@ export default function Footer() {
                  style={{ color: "rgba(255,255,255,0.65)" }}
                  onMouseEnter={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.92)")}
                  onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.65)")}>
-                +886 2 23613585 分機 1200
+                +886 2 23613585
               </a>
             </address>
           </motion.div>

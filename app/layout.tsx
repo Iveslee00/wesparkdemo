@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Noto_Sans_TC } from "next/font/google";
+import { LanguageProvider } from "@/lib/language-context";
 import "./globals.css";
 
 const notoSansTC = Noto_Sans_TC({
@@ -33,7 +34,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="zh-TW" className={notoSansTC.variable}>
-      <body className="antialiased bg-brand-bg font-sans">{children}</body>
+      <body className="antialiased bg-brand-bg font-sans">
+        <LanguageProvider>{children}</LanguageProvider>
+      </body>
     </html>
   );
 }
