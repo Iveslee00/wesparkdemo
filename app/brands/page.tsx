@@ -27,7 +27,7 @@ function HeroSection() {
 
   return (
     <section
-      className="relative flex items-end min-h-[68vh] pt-[72px]"
+      className="relative flex items-end min-h-[48vh] pt-[72px]"
       style={{ backgroundColor: "#140810" }}
     >
       <div className="absolute inset-0">
@@ -42,12 +42,12 @@ function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-t from-[#140810] via-[#140810]/50 to-[#140810]/20" />
       </div>
 
-      <div className="relative z-10 section-container pb-16 md:pb-24 w-full">
+      <div className="relative z-10 section-container pb-10 md:pb-14 w-full">
         <motion.p
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="text-[11px] tracking-[0.42em] uppercase mb-5"
+          className="text-[13px] tracking-[0.42em] uppercase mb-5"
           style={{ color: "rgba(168,128,144,0.85)" }}
         >
           {t.brands.heroLabel}
@@ -57,7 +57,7 @@ function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.32, ease: [0.16, 1, 0.3, 1] }}
           className="font-normal text-white leading-none mb-4"
-          style={{ fontSize: "clamp(48px, 8vw, 110px)", letterSpacing: "-0.02em" }}
+          style={{ fontSize: "clamp(28px, 4vw, 52px)", letterSpacing: "-0.02em" }}
         >
           {t.brands.heroTitle}
         </motion.h1>
@@ -66,7 +66,7 @@ function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.5 }}
           className="text-sm italic font-normal max-w-lg"
-          style={{ color: "rgba(255,255,255,0.52)" }}
+          style={{ color: "rgba(255,255,255,1)" }}
         >
           {t.brands.heroTagline}
         </motion.p>
@@ -90,10 +90,10 @@ function BrandSection({
   const isReverse = index % 2 === 1;
 
   const bg = isDark ? "#140810" : "#F5EFE8";
-  const textPrimary = isDark ? "rgba(255,255,255,0.92)" : "#4B2438";
-  const textMuted = isDark ? "rgba(255,255,255,0.55)" : "rgba(75,36,56,0.58)";
-  const textSub = isDark ? "rgba(168,128,144,0.8)" : "rgba(140,106,120,0.9)";
-  const dividerColor = isDark ? "rgba(255,255,255,0.08)" : "rgba(75,36,56,0.1)";
+  const textPrimary = isDark ? "rgba(255,255,255,1)" : "#4B2438";
+  const textMuted = isDark ? "#ddd0cc" : "rgba(75,36,56,0.7)";
+  const textSub = isDark ? "#a88090" : "rgba(140,106,120,0.9)";
+  const dividerColor = isDark ? "rgba(255,255,255,0.12)" : "rgba(75,36,56,0.15)";
 
   return (
     <section
@@ -134,8 +134,8 @@ function BrandSection({
             {/* Brand number */}
             <div className="absolute top-6 left-6 z-10">
               <span
-                className="text-[11px] tracking-[0.4em] uppercase font-medium"
-                style={{ color: "rgba(255,255,255,0.4)" }}
+                className="text-[13px] tracking-[0.4em] uppercase font-medium"
+                style={{ color: "#a88090" }}
               >
                 {String(index + 1).padStart(2, "0")}
               </span>
@@ -154,19 +154,19 @@ function BrandSection({
             {/* Origin + Founded */}
             <div className="flex items-center gap-4 mb-7">
               <span
-                className="text-[10px] tracking-[0.38em] uppercase"
+                className="text-xs tracking-[0.38em] uppercase"
                 style={{ color: textSub }}
               >
                 {lang === "zh" ? brand.origin.zh : brand.origin.en}
               </span>
               <span
-                className="text-[10px]"
+                className="text-xs"
                 style={{ color: dividerColor }}
               >
                 ·
               </span>
               <span
-                className="text-[10px] tracking-[0.28em]"
+                className="text-xs tracking-[0.28em]"
                 style={{ color: textMuted }}
               >
                 {t.brands.founded} {brand.founded}
@@ -213,25 +213,25 @@ function BrandSection({
             {/* CTA */}
             <div className="group inline-flex items-center gap-3 cursor-default w-fit">
               <span
-                className="text-[11px] tracking-[0.3em] uppercase border-b pb-0.5 transition-all duration-300"
+                className="text-[13px] tracking-[0.3em] uppercase border-b pb-0.5 transition-all duration-300"
                 style={{
-                  color: isDark ? "rgba(255,255,255,0.6)" : "rgba(75,36,56,0.6)",
-                  borderColor: isDark ? "rgba(255,255,255,0.2)" : "rgba(75,36,56,0.2)",
+                  color: isDark ? "#ddd0cc" : "rgba(75,36,56,0.7)",
+                  borderColor: isDark ? "rgba(221,208,204,0.4)" : "rgba(75,36,56,0.3)",
                 }}
                 onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLElement).style.color = isDark ? "rgba(255,255,255,0.9)" : "#4B2438";
+                  (e.currentTarget as HTMLElement).style.color = isDark ? "#ffffff" : "#4B2438";
                   (e.currentTarget as HTMLElement).style.borderColor = isDark ? "rgba(255,255,255,0.6)" : "#4B2438";
                 }}
                 onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLElement).style.color = isDark ? "rgba(255,255,255,0.6)" : "rgba(75,36,56,0.6)";
-                  (e.currentTarget as HTMLElement).style.borderColor = isDark ? "rgba(255,255,255,0.2)" : "rgba(75,36,56,0.2)";
+                  (e.currentTarget as HTMLElement).style.color = isDark ? "#ddd0cc" : "rgba(75,36,56,0.7)";
+                  (e.currentTarget as HTMLElement).style.borderColor = isDark ? "rgba(221,208,204,0.4)" : "rgba(75,36,56,0.3)";
                 }}
               >
                 {t.brands.exploreBrand}
               </span>
               <ArrowRight
                 size={12}
-                style={{ color: isDark ? "rgba(255,255,255,0.5)" : "rgba(75,36,56,0.5)" }}
+                style={{ color: isDark ? "#ddd0cc" : "rgba(75,36,56,0.7)" }}
               />
             </div>
           </motion.div>

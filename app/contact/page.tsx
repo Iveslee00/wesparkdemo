@@ -43,7 +43,7 @@ function HeroSection() {
 
   return (
     <section
-      className="relative flex items-end min-h-[68vh] pt-[72px]"
+      className="relative flex items-end min-h-[48vh] pt-[72px]"
       style={{ backgroundColor: "#140810" }}
     >
       <div
@@ -54,12 +54,12 @@ function HeroSection() {
         }}
       />
 
-      <div className="relative z-10 section-container pb-16 md:pb-24 w-full">
+      <div className="relative z-10 section-container pb-10 md:pb-14 w-full">
         <motion.p
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="text-[11px] tracking-[0.42em] uppercase mb-5"
+          className="text-[13px] tracking-[0.42em] uppercase mb-5"
           style={{ color: "rgba(168,128,144,0.85)" }}
         >
           {t.contact.heroLabel}
@@ -69,7 +69,7 @@ function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.32, ease: [0.16, 1, 0.3, 1] }}
           className="font-normal text-white leading-none mb-3"
-          style={{ fontSize: "clamp(48px, 8vw, 110px)", letterSpacing: "-0.02em" }}
+          style={{ fontSize: "clamp(28px, 4vw, 52px)", letterSpacing: "-0.02em" }}
         >
           {t.contact.heroTitle}
         </motion.h1>
@@ -78,7 +78,7 @@ function HeroSection() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.7, delay: 0.5 }}
           className="text-sm italic"
-          style={{ color: "rgba(255,255,255,0.42)" }}
+          style={{ color: "#ddd0cc" }}
         >
           {t.contact.heroSub}
         </motion.p>
@@ -217,7 +217,7 @@ function ContactSection() {
 
             {/* Decorative */}
             <div className="mt-14 pt-10 border-t border-primary/10">
-              <p className="text-[10px] tracking-[0.38em] uppercase text-primary/30 mb-3">
+              <p className="text-xs tracking-[0.38em] uppercase text-primary/30 mb-3">
                 WE SPARK BEAUTY
               </p>
               <p className="text-xs text-primary/45 font-normal italic leading-relaxed">
@@ -255,7 +255,7 @@ function ContactSection() {
                   </p>
                   <button
                     onClick={() => setStatus("idle")}
-                    className="mt-8 text-[11px] tracking-[0.3em] uppercase border-b pb-0.5 border-secondary/40 text-secondary/70 hover:text-secondary hover:border-secondary transition-all duration-300"
+                    className="mt-8 text-[13px] tracking-[0.3em] uppercase border-b pb-0.5 border-secondary/40 text-secondary/70 hover:text-secondary hover:border-secondary transition-all duration-300"
                   >
                     {fields.submit === "送出訊息" ? "再次傳送" : "Send Again"}
                   </button>
@@ -385,7 +385,7 @@ function ContactSection() {
                     <button
                       type="submit"
                       disabled={status === "sending"}
-                      className="group relative overflow-hidden px-10 py-3.5 text-[11px] tracking-[0.35em] uppercase font-medium
+                      className="group relative overflow-hidden px-10 py-3.5 text-[13px] tracking-[0.35em] uppercase font-medium
                                  text-white transition-all duration-500 disabled:opacity-60"
                       style={{ backgroundColor: "#4B2438" }}
                     >
@@ -422,13 +422,13 @@ function Field({
 }) {
   return (
     <div className="flex flex-col gap-1.5">
-      <label className="text-[11px] tracking-[0.28em] uppercase text-primary/55 font-medium">
+      <label className="text-[13px] tracking-[0.28em] uppercase text-primary/55 font-medium">
         {label}
         {required && <span className="text-secondary ml-0.5">*</span>}
       </label>
       {children}
       {error && (
-        <span className="text-[11px] tracking-[0.1em] text-red-400/80">{error}</span>
+        <span className="text-[13px] tracking-[0.1em] text-red-400/80">{error}</span>
       )}
     </div>
   );

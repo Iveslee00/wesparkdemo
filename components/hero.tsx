@@ -51,7 +51,7 @@ export default function Hero() {
         <div className="max-w-xs lg:max-w-sm">
           {/* Brand tag */}
           <p className="text-xs tracking-[0.42em] uppercase mb-8"
-             style={{ color: "rgba(255,255,255,0.55)" }}>
+             style={{ color: "#a88090" }}>
             品牌主張 · BEAUTY MANIFESTO
           </p>
 
@@ -65,7 +65,7 @@ export default function Hero() {
             BEAUTY.
           </h1>
           <p className="text-sm font-normal tracking-wider mb-10"
-             style={{ color: "rgba(255,255,255,0.68)" }}>
+             style={{ color: "#ddd0cc" }}>
             我們點燃美麗時刻
           </p>
 
@@ -79,7 +79,7 @@ export default function Hero() {
             我們的理念 · OUR PHILOSOPHY
           </p>
           <p className="font-normal leading-snug mb-1"
-             style={{ fontSize: "clamp(18px, 2vw, 22px)", color: "rgba(255,255,255,0.92)" }}>
+             style={{ fontSize: "clamp(18px, 2vw, 22px)", color: "rgba(255,255,255,1)" }}>
             美不是等待，
           </p>
           <p className="font-normal leading-snug mb-5"
@@ -87,12 +87,12 @@ export default function Hero() {
             而是點燃。
           </p>
           <p className="text-sm font-normal italic mb-7"
-             style={{ color: "rgba(255,255,255,0.65)" }}>
+             style={{ color: "#ddd0cc" }}>
             Beauty is not something to wait for.
             <br />It is something to ignite.
           </p>
           <p className="text-base font-normal leading-relaxed mb-10"
-             style={{ color: "rgba(255,255,255,0.75)" }}>
+             style={{ color: "#ddd0cc" }}>
             在 WIS，我們點燃創意與市場之間的火花。
             <br />在概念與成長之間，創造驅動美麗前行的動能。
           </p>
@@ -100,13 +100,13 @@ export default function Hero() {
           {/* CTA */}
           <a href="/brands" className="group inline-flex items-center gap-3">
             <span className="text-sm tracking-[0.3em] uppercase border-b pb-0.5
-                             text-white/85 border-white/40
+                             text-white border-white/40
                              hover:text-white hover:border-white/80
                              transition-all duration-300">
               探索 WIS
             </span>
             <ArrowRight size={13}
-              className="text-white/70 group-hover:text-white group-hover:translate-x-1.5 transition-all duration-300" />
+              className="text-white group-hover:text-white group-hover:translate-x-1.5 transition-all duration-300" />
           </a>
         </div>
       </motion.div>

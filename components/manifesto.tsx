@@ -100,7 +100,7 @@ export default function Manifesto() {
                 而是一種行動。
               </p>
               <div className="pt-6">
-                <p className="text-[10px] tracking-[0.38em] uppercase text-secondary">
+                <p className="text-xs tracking-[0.38em] uppercase text-secondary">
                   WE SPARK BEAUTY
                 </p>
               </div>

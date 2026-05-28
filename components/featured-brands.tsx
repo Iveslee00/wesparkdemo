@@ -85,7 +85,7 @@ function BrandItem({ brand }: { brand: { name: string; zh: string; origin: strin
           </h3>
           <p className="text-base text-primary/55 mt-0.5 font-normal">{brand.zh}</p>
         </div>
-        <span className="text-[11px] tracking-[0.2em] uppercase text-primary/45 mt-1.5
+        <span className="text-[13px] tracking-[0.2em] uppercase text-primary/45 mt-1.5
                          group-hover:text-secondary transition-colors duration-500">
           {brand.origin}
         </span>

@@ -51,7 +51,7 @@ body {
 
 @layer components {
   .section-label {
-    @apply text-[13px] tracking-[0.35em] uppercase font-medium text-secondary;
+    @apply text-sm tracking-[0.35em] uppercase font-medium text-secondary;
   }
 
   .section-title {

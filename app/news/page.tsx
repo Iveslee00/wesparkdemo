@@ -25,7 +25,7 @@ function HeroSection() {
 
   return (
     <section
-      className="relative flex items-end min-h-[68vh] pt-[72px]"
+      className="relative flex items-end min-h-[48vh] pt-[72px]"
       style={{ backgroundColor: "#140810" }}
     >
       <div className="absolute inset-0">
@@ -41,12 +41,12 @@ function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-t from-[#140810] via-[#140810]/55 to-transparent" />
       </div>
 
-      <div className="relative z-10 section-container pb-16 md:pb-24 w-full">
+      <div className="relative z-10 section-container pb-10 md:pb-14 w-full">
         <motion.p
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="text-[11px] tracking-[0.42em] uppercase mb-5"
+          className="text-[13px] tracking-[0.42em] uppercase mb-5"
           style={{ color: "rgba(168,128,144,0.85)" }}
         >
           {t.news.heroLabel}
@@ -56,7 +56,7 @@ function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.32, ease: [0.16, 1, 0.3, 1] }}
           className="font-normal text-white leading-none mb-3"
-          style={{ fontSize: "clamp(48px, 8vw, 110px)", letterSpacing: "-0.02em" }}
+          style={{ fontSize: "clamp(28px, 4vw, 52px)", letterSpacing: "-0.02em" }}
         >
           {t.news.heroTitle}
         </motion.h1>
@@ -65,7 +65,7 @@ function HeroSection() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.7, delay: 0.5 }}
           className="text-sm italic"
-          style={{ color: "rgba(255,255,255,0.42)" }}
+          style={{ color: "#ddd0cc" }}
         >
           {t.news.heroSub}
         </motion.p>
@@ -104,7 +104,7 @@ function ArticleGrid() {
             <button
               key={cat}
               onClick={() => setActiveCategory(i)}
-              className="text-[11px] tracking-[0.28em] uppercase px-4 py-2 border transition-all duration-300"
+              className="text-[13px] tracking-[0.28em] uppercase px-4 py-2 border transition-all duration-300"
               style={{
                 borderColor: activeCategory === i ? "#4B2438" : "rgba(75,36,56,0.2)",
                 color: activeCategory === i ? "#F5EFE8" : "rgba(75,36,56,0.6)",
@@ -187,7 +187,7 @@ function ArticleCard({
           {lang === "zh" ? article.category.zh : article.category.en}
         </span>
         <span className="text-primary/25 text-xs">·</span>
-        <span className="text-[11px] tracking-[0.22em] text-primary/40">{article.date}</span>
+        <span className="text-[13px] tracking-[0.22em] text-primary/40">{article.date}</span>
       </div>
 
       {/* Title */}
@@ -205,7 +205,7 @@ function ArticleCard({
 
       {/* Read more */}
       <span
-        className="text-[11px] tracking-[0.28em] uppercase text-secondary/70
+        className="text-[13px] tracking-[0.28em] uppercase text-secondary/70
                    group-hover:text-secondary transition-colors duration-300 inline-flex items-center gap-1.5"
       >
         {readMore}

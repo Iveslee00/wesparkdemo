@@ -72,7 +72,7 @@ export default function Navbar() {
           <div className="md:hidden flex items-center gap-3">
             <button
               onClick={toggle}
-              className="text-[10px] tracking-[0.22em] font-medium border border-white/25 rounded-sm px-2 py-0.5 text-white/65 hover:text-white hover:border-white/50 transition-colors"
+              className="text-xs tracking-[0.22em] font-medium border border-white/25 rounded-sm px-2 py-0.5 text-white/65 hover:text-white hover:border-white/50 transition-colors"
             >
               {lang === "zh" ? "EN" : "中"}
             </button>
@@ -134,12 +134,12 @@ export default function Navbar() {
             </nav>
 
             <div className="px-10 pb-10 flex items-center justify-between">
-              <p className="text-[9px] tracking-[0.35em] uppercase text-white/25">
+              <p className="text-[13px] tracking-[0.35em] uppercase text-white/25">
                 WE SPARK BEAUTY
               </p>
               <button
                 onClick={toggle}
-                className="text-xs tracking-[0.22em] border border-white/25 rounded-sm px-3 py-1 text-white/55 hover:text-white hover:border-white/50 transition-colors"
+                className="text-xs tracking-[0.22em] border border-white/25 rounded-sm px-3 py-1 text-white/75 hover:text-white hover:border-white/50 transition-colors"
               >
                 {lang === "zh" ? "ENGLISH" : "中文"}
               </button>

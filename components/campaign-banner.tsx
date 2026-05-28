@@ -49,7 +49,7 @@ export default function CampaignBanner() {
           initial={{ opacity: 0, y: 12 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.18 }}
-          className="text-[10px] tracking-[0.42em] uppercase text-white/58 mb-8"
+          className="text-xs tracking-[0.42em] uppercase text-white/58 mb-8"
         >
           CAMPAIGN 2026
         </motion.p>
@@ -72,7 +72,7 @@ export default function CampaignBanner() {
             animate={isInView ? { y: 0, opacity: 1 } : {}}
             transition={{ duration: 0.9, delay: 0.38, ease: [0.16, 1, 0.3, 1] }}
             className="font-normal tracking-tight leading-none italic"
-            style={{ fontSize: "clamp(22px, 4.2vw, 52px)", color: "rgba(255,255,255,0.70)" }}
+            style={{ fontSize: "clamp(22px, 4.2vw, 52px)", color: "rgba(255,255,255,1)" }}
           >
             WE IGNITE IT.
           </motion.h2>
@@ -87,7 +87,7 @@ export default function CampaignBanner() {
           <a
             href="/brands"
             className="group inline-flex items-center gap-4 px-8 py-3.5 border border-white/20
-                       hover:border-white/50 text-white text-[10px] tracking-[0.28em] uppercase
+                       hover:border-white/50 text-white text-xs tracking-[0.28em] uppercase
                        transition-all duration-500 hover:bg-white/5"
           >
             立即探索
